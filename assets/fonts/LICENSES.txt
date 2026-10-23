@@ -1,0 +1,3 @@
+Fonts bundled with this static site:
+- Geist and Geist Mono (c) Vercel, SIL Open Font License 1.1 - https://github.com/vercel/geist-font
+- Special Elite (c) Astigmatic, Apache License 2.0 - https://fonts.google.com/specimen/Special+Elite

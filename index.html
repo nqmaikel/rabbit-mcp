@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabbit — The Rabbit Hole · 54 research tools for AI assistants, one free family forever</title>
+<meta name="description" content="Rabbit (The Rabbit Hole): macro data, quant methods, public-company filings and academic papers — 54 hosted tools behind one MCP URL. Pick one family free forever, or go Pro for €30/month.">
+<meta name="theme-color" content="#07090b">
+<meta property="og:title" content="Rabbit — The Rabbit Hole">
+<meta property="og:description" content="54 research tools for AI assistants behind one MCP URL. One family free forever. Hosted — nothing to install.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nqmaikel.github.io/rabbit-mcp/">
+<meta property="og:image" content="https://nqmaikel.github.io/rabbit-mcp/assets/og.png">
+<meta name="twitter:image" content="https://nqmaikel.github.io/rabbit-mcp/assets/og.png">
+<link rel="canonical" href="https://nqmaikel.github.io/rabbit-mcp/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="rabbit-mark" viewBox="0 0 64 44">
+    <mask id="rm"><rect width="64" height="44" fill="#fff"/><circle cx="26.5" cy="24" r="1.6" fill="#000"/><circle cx="37.5" cy="24" r="1.6" fill="#000"/></mask>
+    <g fill="currentColor"><path mask="url(#rm)" d="M21 18C16 8 17 1 21.5 1 26 1 28.5 9 28.5 17.5ZM43 18C48 8 47 1 42.5 1 38 1 35.5 9 35.5 17.5ZM32 14c8 0 12 5 12 11 0 4-3 7-7 8H27c-4-1-7-4-7-8 0-6 4-11 12-11Z"/><path d="M5 38c9-7 45-7 54 0-9 6-45 6-54 0Zm8 0c7 3 31 3 38 0-7-3-31-3-38 0Z" fill-rule="evenodd"/></g>
+  </symbol>
+  <symbol id="discord" viewBox="0 0 24 24"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.2.5a18.300 18.300 0 0 0-6.400 0L8.600 3a19.700 19.700 0 0 0-4.900 1.400C.600 9 -.200 13.500.200 18a19.900 19.900 0 0 0 6 3l1.300-2.100a12.900 12.900 0 0 1-2-1l.5-.4a14.200 14.200 0 0 0 12 0l.5.4c-.6.400-1.300.7-2 1L17.800 21a19.800 19.800 0 0 0 6-3c.5-5.200-.8-9.700-3.500-13.600ZM8.500 15.300c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Zm7 0c-1.200 0-2.100-1.100-2.100-2.400s.9-2.400 2.100-2.400 2.100 1.100 2.100 2.400-.9 2.400-2.100 2.400Z"/></symbol>
+  <symbol id="star" viewBox="0 0 24 24"><path d="M12 2.2l2.9 6.1 6.7.9-4.9 4.6 1.2 6.6L12 17.2l-5.9 3.2 1.2-6.6L2.4 9.2l6.7-.9z"/></symbol>
+</defs></svg>
+
+<header class="nav" id="nav">
+  <div class="nav-shell">
+    <a class="brand" href="#top" aria-label="Rabbit — home">
+      <svg class="brand-mark" viewBox="0 0 64 44" aria-hidden="true"><use href="#rabbit-mark"/></svg>
+      <span class="brand-word">RABBIT<span>HOLE</span></span>
+    </a>
+    <div class="depth" aria-label="Scroll depth"><canvas id="ekg" width="240" height="56" aria-hidden="true"></canvas><span class="depth-read"><b id="depth">0.0</b> m</span></div>
+    <nav class="nav-actions" aria-label="Primary">
+      <a class="nl" href="#tools" data-i18n="nav.tools">Tools</a>
+      <a class="nl hide-s" href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a class="nl hide-s" href="#connect" data-i18n="nav.connect">Connect</a>
+      <button class="nl lang" id="lang" type="button" aria-label="Switch language / Cambiar idioma">ES</button>
+      <a class="nl" href="https://discord.gg/rFHFdbQ2xA" data-discord rel="noopener" aria-label="Join the Discord server"><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#discord"/></svg><span class="hide-s" data-i18n="nav.discord">Discord</span></a>
+      <a class="gh" href="https://github.com/nqmaikel/rabbit-mcp" data-star rel="noopener" target="_blank" aria-label="Leave a star on GitHub"><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#star"/></svg><span data-i18n="star.label">Leave a star</span><span class="badge" data-star-count hidden></span></a>
+    </nav>
+  </div>
+</header>
+
+<p class="sr-only" id="status" role="status"></p>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <canvas id="hole" aria-label="ASCII art: a rabbit sitting at the lip of a spiralling hole"></canvas>
+  <div class="hero-copy">
+    <h1 data-i18n="hero.h1">Fall down the <em class="horror">hole</em>.<br>Come back with proof.</h1>
+    <p class="sub" data-i18n="hero.sub">{total} research tools for AI assistants behind one hosted URL: macro, quant methods, filings and papers. Pick one family and use it free, forever.</p>
+    <div class="actions">
+      <a class="btn primary" href="#connect"><span data-i18n="hero.cta1">Start free</span><span class="stars" data-i18n="hero.cta1b">no card</span></a>
+      <a class="btn star-btn" href="https://github.com/nqmaikel/rabbit-mcp" data-star rel="noopener" target="_blank"><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#star"/></svg><span data-i18n="star.label">Leave a star</span><span class="cnt" data-star-count hidden></span></a>
+      <a class="btn" href="#pricing" data-i18n="hero.cta2">See pricing</a>
+    </div>
+    <a class="proof" href="#pricing"><span class="claim" data-i18n="hero.proof1"><b>1 family</b> free, unlimited</span><span data-i18n="hero.proof2">Pro: all four · €{price}/mo</span><span class="arrow" aria-hidden="true">↓</span></a>
+  </div>
+  <p class="hint" aria-hidden="true"><kbd data-i18n="hero.k1">click</kbd> <span data-i18n="hero.h1t">drop a ripple</span> · <kbd data-i18n="hero.k2">move</kbd> <span data-i18n="hero.h2t">bend the hole</span></p>
+</section>
+
+<!-- WINDOW -->
+<div class="container">
+  <div class="window-wrap" id="demo">
+    <div class="window">
+      <div class="w-bar">
+        <div class="w-dots"><i></i><i></i><i></i></div>
+        <span class="w-title" data-i18n="win.title">route · illustrative session</span>
+        <div class="seg" id="scen" role="group" aria-label="Scenarios">
+          <button type="button" aria-pressed="true" data-s="0">Macro</button>
+          <button type="button" aria-pressed="false" data-s="1">QuantFi</button>
+          <button type="button" aria-pressed="false" data-s="2">Premia</button>
+          <button type="button" aria-pressed="false" data-s="3">Edge</button>
+        </div>
+      </div>
+      <div class="w-body">
+        <div class="w-left">
+          <div class="label" data-i18n="win.you">Your assistant</div>
+          <pre class="code" id="w-code"></pre>
+          <div class="native"><span class="n-label" id="w-nl"></span><span class="n-bad" id="w-nb"></span><span class="n-why" id="w-nw"></span></div>
+        </div>
+        <div class="w-right">
+          <div class="label">Rabbit</div>
+          <ol class="ladder" id="w-ladder"></ol>
+        </div>
+      </div>
+      <div class="w-foot"><div class="label" data-i18n="win.foot">One URL · four families</div><div class="summary" id="w-sum"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 01 -->
+<section class="sec" id="why">
+  <div class="sec-head" data-reveal>
+    <h2 data-i18n="why.h2">Four tunnels. One <em class="horror">hole</em>.</h2>
+    <p class="lede" data-i18n="why.lede">Research tools used to live in separate servers with separate sign-ins and configs. Rabbit folds them into a single hosted endpoint, so your assistant can move from a Fed liquidity series to a 10-K to a backtest audit without you reconfiguring anything.</p>
+  </div>
+  <div class="stats" data-reveal>
+    <div class="stat"><span class="v" data-count="{total}">54</span><span class="l" data-i18n="st.1">research tools</span><span class="n" data-i18n="st.1n">behind one endpoint</span></div>
+    <div class="stat"><span class="v">4</span><span class="l" data-i18n="st.2">tool families</span><span class="n" data-i18n="st.2n">Macro · QuantFi · Premia · Edge</span></div>
+    <div class="stat"><span class="v">1</span><span class="l" data-i18n="st.3">URL to connect</span><span class="n" data-i18n="st.3n">hosted · nothing to install</span></div>
+    <div class="stat"><span class="v">€0</span><span class="l" data-i18n="st.4">to start</span><span class="n" data-i18n="st.4n">one family, unlimited, no card</span></div>
+  </div>
+  <h3 class="sec-h3" data-reveal data-i18n="why.h3">Where the tools live.</h3>
+  <div class="panel bars" data-reveal style="margin-top:22px">
+    <div class="bars-head"><span data-i18n="bars.l">tools per family</span><span data-i18n="bars.r">read-only research tools</span></div>
+    <div class="bar-row"><div class="nm">Macro<small data-i18n="bars.macro">market context &amp; charts</small></div><div class="tr"><i data-w="macro"></i></div><div class="ct"><span data-n="macro">28</span> <span data-i18n="bars.t">tools</span></div></div>
+    <div class="bar-row"><div class="nm">QuantFi<small data-i18n="bars.qf">quant methods &amp; backtests</small></div><div class="tr"><i data-w="quantfi"></i></div><div class="ct"><span data-n="quantfi">10</span> <span data-i18n="bars.t">tools</span></div></div>
+    <div class="bar-row"><div class="nm">Premia<small data-i18n="bars.pr">official company facts</small></div><div class="tr"><i data-w="premia"></i></div><div class="ct"><span data-n="premia">10</span> <span data-i18n="bars.t">tools</span></div></div>
+    <div class="bar-row"><div class="nm">Edge<small data-i18n="bars.ed">papers ranked S/A/B/C</small></div><div class="tr"><i data-w="edge"></i></div><div class="ct"><span data-n="edge">6</span> <span data-i18n="bars.t">tools</span></div></div>
+    <div class="bar-foot" data-i18n="bars.foot">28 + 10 + 10 + 6 = {total} · the Edge Discord bot lives separately, inside the server.</div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section class="sec" id="tools">
+  <div class="sec-head" data-reveal>
+    <h2 data-i18n="tools.h2">Every tool, <em class="horror">named</em>.</h2>
+    <p class="lede" data-i18n="tools.lede">Four families, one connection. On the free plan you pick the one you need most; Pro opens all four.</p>
+  </div>
+  <div class="bento" data-reveal>
+    <article class="panel patch">
+      <div class="viz"><svg viewBox="0 0 240 128" preserveAspectRatio="none" aria-hidden="true"><g stroke="#ffffff10"><path d="M0 32H240M0 64H240M0 96H240"/></g><path d="M0 98C24 90 36 70 60 76S100 44 126 54 170 28 196 36 226 24 240 20" fill="none" stroke="#9af0b0" stroke-width="2"/><path d="M0 108C30 100 50 96 80 92S130 84 160 70 210 62 240 56" fill="none" stroke="#56bfc2" stroke-width="2" stroke-dasharray="4 4"/></svg></div>
+      <div class="fam"><h3>Macro</h3><b>28</b></div>
+      <p data-i18n="b.macro">Regime, liquidity, curve, credit and growth views, plus official FRED, EIA and CFTC data.</p>
+      <div class="chips"><span class="chip hl">data_net_liquidity</span><span class="chip">data_yield_curve</span><span class="chip">data_cot</span></div>
+    </article>
+    <article class="panel patch">
+      <div class="viz"><svg viewBox="0 0 240 128" preserveAspectRatio="none" aria-hidden="true"><path d="M0 100L30 92 60 96 90 70 120 76 150 48 180 54 210 30 240 22" fill="none" stroke="#9af0b0" stroke-width="2"/><g fill="#f07a6e"><circle cx="90" cy="70" r="4"/><circle cx="150" cy="48" r="4"/></g><g font-family="monospace" font-size="9" fill="#86918a"><text x="96" y="64">leak?</text><text x="156" y="42">timing?</text></g></svg></div>
+      <div class="fam"><h3>QuantFi</h3><b>10</b></div>
+      <p data-i18n="b.qf">Turn an idea into a falsifiable plan, design a point-in-time backtest, then audit it.</p>
+      <div class="chips"><span class="chip hl">audit_backtest</span><span class="chip">design_validation</span><span class="chip">build_research_plan</span></div>
+    </article>
+    <article class="panel patch">
+      <div class="viz" style="padding:12px;display:flex;flex-direction:column;gap:6px;justify-content:center"><div class="mini ok"><span>revenue</span><span class="g">✓ source</span></div><div class="mini"><span>margins</span><span class="g">✓ source</span></div><div class="mini miss"><span>segment data</span><span class="y">gap flagged</span></div></div>
+      <div class="fam"><h3>Premia</h3><b>10</b></div>
+      <p data-i18n="b.pr">Facts and reports from official public sources, with evidence references and coverage flags.</p>
+      <div class="chips"><span class="chip hl">compare_reports</span><span class="chip">company_financials</span><span class="chip">read_report</span></div>
+    </article>
+    <article class="panel patch">
+      <div class="viz" style="padding:14px;display:flex;align-items:center"><div class="tier" style="width:100%"><b class="s">S</b><b class="a">A</b><b class="b">B</b><b class="c">C</b></div></div>
+      <div class="fam"><h3>Edge</h3><b>6</b></div>
+      <p data-i18n="b.ed">Academic paper discovery for trading research, in priority order, with direct arXiv links.</p>
+      <div class="chips"><span class="chip hl">find_papers</span><span class="chip">read_paper</span><span class="chip">find_researchers</span></div>
+    </article>
+  </div>
+  <article class="panel bot" data-reveal>
+    <div>
+      <div class="label" data-i18n="bot.l">Discord · free in the server</div>
+      <h3 data-i18n="bot.h">The Edge bot, inside The Rabbit Hole</h3>
+      <p data-i18n="bot.p">The same paper-ranking engine as Edge, as a Discord bot. Run <code>/papers</code>, describe your trading project, and get a private S/A/B/C reading list with direct arXiv links. Free for everyone inside the official Discord server.</p>
+      <div class="actions" style="margin-top:18px"><a class="btn primary" href="https://discord.gg/rFHFdbQ2xA" data-discord rel="noopener"><svg width="16" height="16" fill="currentColor" aria-hidden="true"><use href="#discord"/></svg><span data-i18n="bot.cta">Join The Rabbit Hole</span></a></div>
+    </div>
+    <div class="tier" aria-label="S, A, B and C tiers"><b class="s">S</b><b class="a">A</b><b class="b">B</b><b class="c">C</b></div>
+  </article>
+</section>
+
+<!-- 03 -->
+<section class="sec" id="flow">
+  <div class="sec-head" data-reveal>
+    <h2 data-i18n="flow.h2">Question in. <em class="horror">Evidence</em> out.</h2>
+    <p class="lede" data-i18n="flow.lede">Your assistant asks once. Rabbit routes the call to the right family, pulls from official public sources, and hands back the result with its source attached. The charts and calculations are built in your own session.</p>
+  </div>
+  <div class="panel flow" data-reveal>
+    <svg viewBox="0 0 1000 440" role="img" aria-label="Flow from your question through Rabbit to sourced evidence">
+      <defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M1 1L9 5 1 9" fill="none" stroke="#86918a" stroke-width="1.5"/></marker></defs>
+      <path class="path" marker-end="url(#arr)" d="M20 82H940C990 82 990 222 940 222H60C10 222 10 362 60 362H975"/>
+      <text x="20" y="40" font-family="Geist Mono,monospace" font-size="13" font-weight="600" fill="#f4f7f5">ask("…")</text>
+      <g class="fnode hot"><rect x="60" y="60" width="210" height="44" rx="10"/><text x="76" y="86" data-i18n="fl.1">Your question</text><text class="tg" x="254" y="86" text-anchor="end">mcp</text></g>
+      <g class="fnode"><rect x="395" y="60" width="210" height="44" rx="10"/><text x="411" y="86" data-i18n="fl.2">Rabbit · one URL</text><text class="tg" x="589" y="86" text-anchor="end">host</text></g>
+      <g class="fnode"><rect x="730" y="60" width="210" height="44" rx="10"/><text x="746" y="86" data-i18n="fl.3">Discord sign-in</text><text class="tg" x="924" y="86" text-anchor="end">free</text></g>
+      <g class="fnode hot"><rect x="730" y="200" width="210" height="44" rx="10"/><text x="746" y="226" data-i18n="fl.4">Your free family</text><text class="tg" x="924" y="226" text-anchor="end">free</text></g>
+      <g class="fnode dash"><rect x="395" y="200" width="210" height="44" rx="10"/><text x="411" y="226" data-i18n="fl.5">The other families</text><text class="tg" x="589" y="226" text-anchor="end">pro</text></g>
+      <g class="fnode"><rect x="60" y="200" width="210" height="44" rx="10"/><text x="76" y="226" data-i18n="fl.6">Official sources</text><text class="tg" x="254" y="226" text-anchor="end">✓</text></g>
+      <g class="fnode"><rect x="60" y="340" width="210" height="44" rx="10"/><text x="76" y="366" data-i18n="fl.7">Result + source</text><text class="tg" x="254" y="366" text-anchor="end">✓</text></g>
+      <g class="fnode"><rect x="395" y="340" width="210" height="44" rx="10"/><text x="411" y="366" data-i18n="fl.8">Built in your session</text><text class="tg" x="589" y="366" text-anchor="end">local</text></g>
+      <g class="fnode hot"><rect x="730" y="340" width="210" height="44" rx="10"/><text x="746" y="366" data-i18n="fl.9">Your answer</text><text class="tg" x="924" y="366" text-anchor="end">→</text></g>
+    </svg>
+    <div class="flow-code">ask("Is the liquidity tailwind fading?")</div>
+    <div class="flow-leg"><span data-i18n="leg.free">free family</span><span class="lg-cap" data-i18n="leg.pro">Pro: all four families</span></div>
+  </div>
+</section>
+
+<!-- 04 -->
+<section class="sec" id="more">
+  <div class="sec-head" data-reveal>
+    <h2 data-i18n="more.h2">More than a <em class="horror">tool list</em>.</h2>
+    <p class="lede" data-i18n="more.lede">Rabbit is a layer of method and recipes on top of public data: it tells your assistant how to do the work, and shows its evidence.</p>
+  </div>
+  <div class="cards" data-reveal>
+    <article class="panel patch card"><div class="viz"><div class="mini bad"><span>look-ahead</span><span class="r">found</span></div><div class="mini bad"><span>costs omitted</span><span class="r">found</span></div><div class="mini ok"><span>walk-forward</span><span class="g">ok</span></div></div><h3 data-i18n="m1.h">Audit a backtest</h3><p data-i18n="m1.p">Leakage, timing errors and missing costs, listed as findings, never as a promise of returns.</p></article>
+    <article class="panel patch card"><div class="viz"><div class="mini"><span>+ risk factors</span><span class="g">new</span></div><div class="mini"><span>− legacy segment</span><span class="r">removed</span></div><div class="mini"><span>outlook</span><span class="y">changed</span></div></div><h3 data-i18n="m2.h">Diff two filings</h3><p data-i18n="m2.p">See what a company added or removed between reports, with references back to the filing.</p></article>
+    <article class="panel patch card"><div class="viz"><div class="tier"><b class="s">S</b><b class="a">A</b><b class="b">B</b><b class="c">C</b></div><div class="mini"><span>paper</span><span class="g">arXiv ↗</span></div></div><h3 data-i18n="m3.h">Papers worth reading</h3><p data-i18n="m3.p">A ranked reading list for your trading project, S tier first, with direct arXiv links.</p></article>
+    <article class="panel patch card"><div class="viz"><div class="mini ok"><span>result</span><span class="g">✓</span></div><div class="mini"><span>source</span><span>SEC · BLS · BEA</span></div><div class="mini"><span>attribution</span><span class="g">shown</span></div></div><h3 data-i18n="m4.h">Sources, always shown</h3><p data-i18n="m4.p">Premia and official-data results always carry their source and attribution, such as BLS, SEC and BEA.</p></article>
+    <article class="panel patch card"><div class="viz"><div class="mini ok"><span>Macro</span><span class="g">your pick</span></div><div class="mini miss"><span>QuantFi · Premia · Edge</span><span class="y">Pro</span></div><div class="meter"><i style="width:100%"></i></div></div><h3 data-i18n="m5.h">One family, no meter</h3><p data-i18n="m5.p">Free means free: choose one family and use it without limits. No daily cap, no card.</p></article>
+    <article class="panel patch card"><div class="viz"><div class="mini"><span>coverage</span><span class="g">partial</span></div><div class="mini miss"><span>segment data</span><span class="y">gap flagged</span></div><div class="mini"><span>freshness</span><span>delayed</span></div></div><h3 data-i18n="m6.h">Honest about gaps</h3><p data-i18n="m6.p">Data can be delayed or incomplete. Rabbit flags what's missing instead of filling the hole with a guess.</p></article>
+  </div>
+</section>
+
+<!-- 05 -->
+<section class="sec" id="pricing">
+  <div class="sec-head" data-reveal>
+    <h2 data-i18n="pr.h2">Free to dive. <em class="horror">Pro</em> to go deep.</h2>
+    <p class="lede" data-i18n="pr.lede">Pick one family and it's yours, free forever, with no usage limit. Want all four? Pro is €{price} a month, billed through Whop.</p>
+  </div>
+  <div class="plans" data-reveal>
+    <article class="panel plan">
+      <div class="tag"><span data-i18n="pr.f.tag">Free</span><span data-i18n="pr.f.tag2">forever</span></div>
+      <p class="price"><b>€0</b><span data-i18n="pr.f.per">no card · no limit</span></p>
+      <ul>
+        <li data-i18n="pr.f.1"><span><b>One family of your choice:</b> Macro, QuantFi, Premia or Edge</span></li>
+        <li data-i18n="pr.f.2"><span><b>Unlimited use</b> of that family</span></li>
+        <li data-i18n="pr.f.3"><span>Sign in with <b>Discord</b>, nothing else</span></li>
+        <li data-i18n="pr.f.4"><span>Sources shown on every official-data result</span></li>
+        <li data-i18n="pr.f.5"><span>The Edge Discord bot, free in the server</span></li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn primary" href="#connect" data-i18n="pr.f.b1">Start free</a>
+        <a class="btn" href="https://discord.gg/rFHFdbQ2xA" data-discord rel="noopener" data-i18n="pr.f.b2">Join Discord</a>
+      </div>
+    </article>
+    <article class="panel plan pro">
+      <div class="tag"><span>Pro</span><span data-i18n="pr.p.tag2">all four families</span></div>
+      <p class="price"><b data-price-eur>€30</b><span data-i18n="pr.p.per">per month · unlimited</span></p>
+      <ul>
+        <li data-i18n="pr.p.1"><span><b>All four families:</b> all {total} tools</span></li>
+        <li data-i18n="pr.p.2"><span><b>Unlimited use</b> across every family</span></li>
+        <li data-i18n="pr.p.3"><span>Everything in Free</span></li>
+        <li data-i18n="pr.p.4"><span>Billed through <b>Whop</b></span></li>
+      </ul>
+      <div class="cta-row">
+        <a class="btn primary" href="#" id="whop" aria-disabled="true"><span data-i18n="pr.p.b1">Subscribe with Whop</span> <small data-i18n="soon">coming soon</small></a>
+      </div>
+    </article>
+  </div>
+  <p class="plan-note" data-i18n="pr.note">Rabbit is hosted and closed-source: free to use, with the code kept private. This website's repository contains only the static site.</p>
+</section>
+
+<!-- 06 -->
+<section class="sec" id="connect">
+  <div class="sec-head" data-reveal>
+    <h2 data-i18n="con.h2">Works where your assistant <em class="horror">lives</em>.</h2>
+    <p class="lede" data-i18n="con.lede">Rabbit speaks MCP over Streamable HTTP. If your assistant supports remote MCP servers, it works: add the URL, sign in with Discord once, ask.</p>
+  </div>
+  <div class="panel tabs-window" data-reveal>
+    <div class="w-bar"><div class="w-dots"><i></i><i></i><i></i></div><span class="w-title" data-i18n="con.title">connect</span>
+      <div class="seg" id="ctabs" role="tablist" aria-label="Client">
+        <button type="button" role="tab" aria-selected="true" data-c="cursor">Cursor</button>
+        <button type="button" role="tab" aria-selected="false" data-c="cc">Claude Code</button>
+        <button type="button" role="tab" aria-selected="false" data-c="cd">Claude app</button>
+        <button type="button" role="tab" aria-selected="false" data-c="gen" data-i18n="con.any">Any client</button>
+      </div>
+    </div>
+    <div class="conn">
+      <div>
+        <div class="label" data-i18n="con.plugin">Add the server</div>
+        <div class="codeblk"><button class="copy" type="button" id="ccopy" data-i18n="copy">Copy</button><pre id="cpre"></pre></div>
+        <p class="hintp" id="chint"></p>
+      </div>
+      <div>
+        <div class="label" data-i18n="con.rec">Every call comes back with a source</div>
+        <div class="receipt"><pre class="code"><span class="c">// illustrative</span>
+<span class="f">company_financials</span>(<span class="s">"ACME"</span>)
+→ revenue &amp; margin trend
+  <span class="f">source</span>   SEC EDGAR · official
+  <span class="f">coverage</span> partial · gap flagged
+  <span class="f">evidence</span> ref #… · read_report ↗</pre></div>
+        <p class="hintp" data-i18n="con.sign">First connection opens a Discord sign-in. Approve it and you're done — no API key to copy.</p>
+      </div>
+    </div>
+    <div class="gets">
+      <div class="label" data-i18n="gets.l">What your agent gets · {total} tools</div>
+      <div class="gets-grid">
+        <div class="gets-col"><h4>Macro <span>28</span></h4><dl>
+          <div><dt>data_net_liquidity</dt><dd data-i18n="g.m1">Fed liquidity from official series</dd></div>
+          <div><dt>data_yield_curve</dt><dd data-i18n="g.m2">Today vs a month and a year ago</dd></div>
+          <div><dt>data_official_calendar</dt><dd data-i18n="g.m3">Official release calendar</dd></div>
+          <div><dt>data_oil_cushing</dt><dd data-i18n="g.m4">Cushing crude inventories</dd></div>
+          <div><dt>data_cot</dt><dd data-i18n="g.m5">CFTC positioning</dd></div>
+          <div><dt>+23 workbench</dt><dd data-i18n="g.m6">regime, cycle, credit, GDP nowcast, scenarios…</dd></div></dl></div>
+        <div class="gets-col"><h4>QuantFi <span>10</span></h4><dl>
+          <div><dt>build_research_plan</dt><dd data-i18n="g.q1">Hypothesis → bias-aware protocol</dd></div>
+          <div><dt>specify_strategy</dt><dd data-i18n="g.q2">Universe, signal, sizing, risk</dd></div>
+          <div><dt>design_backtest</dt><dd data-i18n="g.q3">Point-in-time architecture</dd></div>
+          <div><dt>audit_backtest</dt><dd data-i18n="g.q4">Leakage, timing, cost review</dd></div>
+          <div><dt>design_validation</dt><dd data-i18n="g.q5">Walk-forward, holdout, embargo</dd></div>
+          <div><dt>+5 more</dt><dd data-i18n="g.q6">analyze_results, search_knowledge…</dd></div></dl></div>
+        <div class="gets-col"><h4>Premia <span>10</span></h4><dl>
+          <div><dt>search_companies</dt><dd data-i18n="g.p1">Find by name, ticker or ID</dd></div>
+          <div><dt>company_financials</dt><dd data-i18n="g.p2">Trends, margins, cash metrics</dd></div>
+          <div><dt>research_company</dt><dd data-i18n="g.p3">Evidence pack in one call</dd></div>
+          <div><dt>read_report</dt><dd data-i18n="g.p4">Text and tables with references</dd></div>
+          <div><dt>compare_reports</dt><dd data-i18n="g.p5">What was added or removed</dd></div>
+          <div><dt>+5 more</dt><dd data-i18n="g.p6">filing_briefing, list_reports…</dd></div></dl></div>
+        <div class="gets-col"><h4>Edge <span>6</span></h4><dl>
+          <div><dt>find_papers</dt><dd data-i18n="g.e1">1–30 papers for your project</dd></div>
+          <div><dt>search_papers</dt><dd data-i18n="g.e2">Topic search with tier scores</dd></div>
+          <div><dt>tier_guide</dt><dd data-i18n="g.e3">What S, A, B and C mean</dd></div>
+          <div><dt>read_paper</dt><dd data-i18n="g.e4">Read one paper from its arXiv ID</dd></div>
+          <div><dt>author_papers</dt><dd data-i18n="g.e5">Papers by 1–10 researchers</dd></div>
+          <div><dt>find_researchers</dt><dd data-i18n="g.e6">Who works on this topic</dd></div></dl></div>
+      </div>
+    </div>
+  </div>
+  <div class="notice" data-reveal><b data-i18n="con.noteh">Heads-up: the endpoint may move.</b> <span data-i18n="con.note">The URL above is the current production endpoint. We may move Rabbit to its own domain; if so, this page will show the new URL and the old one will keep working through a transition period.</span></div>
+</section>
+
+<!-- 07 -->
+<section class="sec" id="faq">
+  <div class="sec-head" data-reveal>
+    <h2 data-i18n="faq.h2">Questions, <em class="horror">answered</em>.</h2>
+  </div>
+  <div class="faq" data-reveal>
+    <details open><summary data-i18n="q1">How does the free plan work?</summary><p data-i18n="a1">You pick <strong>one family</strong> (Macro, QuantFi, Premia or Edge) and use it free, forever, with no usage limit and no card. You sign in with Discord. Pro (€{price}/month) unlocks all four families, also unlimited.</p></details>
+    <details><summary data-i18n="q2">What does Pro include, and how do I pay?</summary><p data-i18n="a2">Pro is €{price} a month for unlimited use of all four families ({total} tools). Billing runs through <strong>Whop</strong>. Subscribe from the pricing section; the free plan stays open to everyone.</p></details>
+    <details><summary data-i18n="q3">Can I see the code?</summary><p data-i18n="a3">No. Rabbit is a <strong>hosted, closed-source</strong> service: free to use, but the server code isn't published. The repository behind this website contains only the static site.</p></details>
+    <details><summary data-i18n="q4">Do results show where the data comes from?</summary><p data-i18n="a4">Yes. <strong>Premia and official-data results always show their source</strong>, with attribution to the publishing agency, for example BLS, SEC or BEA. Rabbit is independent and not endorsed by those agencies.</p></details>
+    <details><summary data-i18n="q5">Is this investment advice?</summary><p data-i18n="a5">No. Rabbit provides research tooling. Backtests are simulations, not forecasts, and data may be delayed or incomplete. Nothing here promises returns.</p></details>
+    <details><summary data-i18n="q6">What about the Discord bot?</summary><p data-i18n="a6">The Edge paper-ranking bot is free for everyone inside the official Discord server, <strong>The Rabbit Hole</strong>. <a href="https://discord.gg/rFHFdbQ2xA" data-discord rel="noopener">Join with the invite link</a> and run <code>/papers</code>.</p></details>
+    <details><summary data-i18n="q7">Does the endpoint URL change?</summary><p data-i18n="a7">It may. The current endpoint is shown in the connect section. If Rabbit moves to its own domain, this page will show the new URL and the old one will keep working during a transition period.</p></details>
+    <details><summary data-i18n="q8">Do you see my code or touch my broker?</summary><p data-i18n="a8">No. Calculations and charts are assembled in your own assistant. Rabbit's tools are read-only research tools; they don't run your code or connect to your brokerage.</p></details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-card panel" data-reveal>
+    <h2 data-i18n="cta.h2">Take the <em class="horror">plunge</em>.</h2>
+    <p data-i18n="cta.p">Hosted. One URL. Pick a family, free forever, and sign in with Discord.</p>
+    <div class="cta-row">
+      <a class="btn primary big" href="https://discord.gg/rFHFdbQ2xA" data-discord rel="noopener"><svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#discord"/></svg><span data-i18n="cta.b">Join The Rabbit Hole</span></a>
+      <a class="btn big star-btn" href="https://github.com/nqmaikel/rabbit-mcp" data-star rel="noopener" target="_blank"><svg width="18" height="18" fill="currentColor" aria-hidden="true"><use href="#star"/></svg><span data-i18n="star.label">Leave a star</span><span class="cnt" data-star-count hidden></span></a>
+      <div class="cmd"><span class="p">$</span><code data-endpoint>https://the-macro-dashboard.com/mcp</code><button type="button" id="ecopy" data-i18n="copy">Copy</button></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-in">
+    <span class="footer-brand"><svg viewBox="0 0 64 44" aria-hidden="true"><use href="#rabbit-mark"/></svg>Rabbit · The Rabbit Hole</span>
+    <span class="foot-links"><a class="footer-brand" href="https://github.com/nqmaikel/rabbit-mcp" data-star rel="noopener" target="_blank">★ <span data-i18n="star.label">Leave a star</span> ↗</a><a class="footer-brand" href="https://discord.gg/rFHFdbQ2xA" data-discord rel="noopener">Discord ↗</a></span>
+    <span class="alive" data-i18n="foot.tag">Mind the gap.</span>
+  </div>
+  <p class="legal" data-i18n="foot.legal">Rabbit provides research tooling, not investment advice. Backtests are simulations, not forecasts. Data comes from official public sources and may be delayed or incomplete, and is attributed to its publisher (for example BLS, SEC, BEA). Rabbit is independent and not affiliated with or endorsed by the sources or clients named on this page. © 2026 Rabbit.</p>
+</footer>
+</main>
+
+<script src="assets/config.js"></script>
+<script src="assets/hero.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
